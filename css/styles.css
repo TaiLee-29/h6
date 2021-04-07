@@ -59,6 +59,7 @@
 }
 
 .intro__content {
+    pointer-events: visible;
     text-align: center;
     position: absolute;
     top: 50%;
@@ -84,4 +85,47 @@
     float: left;
     width: calc(33.332% - 20px);
     margin: 0 10px 20px;
+}
+.box1::before{
+    content: "Use '::before'";
+    background-color: #555555 ;
+    color: blueviolet;
+    font-size: 100px;
+}
+.box1 {
+    background: linear-gradient(to top, grey 50%, antiquewhite);
+    border: 10px solid blueviolet;
+    box-sizing: border-box;
+    z-index: 3;
+}
+.box2 {
+    transition: color .3s ease, text-shadow .3s ease, border .3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    margin: 20px;
+    border: 10px solid rosybrown;
+    box-sizing: border-box;
+    z-index: 6;
+}
+.box2::after{
+    transition: all .3s ease;
+    content: "Use '::after'";
+    background-color: #555555 ;
+    color: blueviolet;
+    font-size: 100px;
+}
+.parent:first-child{
+    color: blueviolet;
+}
+p{
+    text-indent: 4px;
+    word-spacing: 15px;
+    letter-spacing: 2px;
+
+}
+b{
+    word-wrap: break-word;
+    visibility: visible;
 }
